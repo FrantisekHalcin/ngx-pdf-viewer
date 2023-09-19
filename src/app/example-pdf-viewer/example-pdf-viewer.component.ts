@@ -1,5 +1,6 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import {Component, ChangeDetectionStrategy, OnInit} from '@angular/core';
 import { NgxExtendedPdfViewerService, pdfDefaultOptions } from 'ngx-extended-pdf-viewer';
+import {fake} from "../shared/fake";
 
 @Component({
   selector: 'app-example-pdf-viewer',
@@ -7,7 +8,7 @@ import { NgxExtendedPdfViewerService, pdfDefaultOptions } from 'ngx-extended-pdf
   styleUrls: ['./example-pdf-viewer.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ExamplePdfViewerComponent {
+export class ExamplePdfViewerComponent implements OnInit {
   /** In most cases, you don't need the NgxExtendedPdfViewerService. It allows you
    *  to use the "find" api, to extract text and images from a PDF file,
    *  to print programmatically, and to show or hide layers by a method call.
@@ -21,7 +22,11 @@ export class ExamplePdfViewerComponent {
     // but most devices support much higher resolutions.
     // Increasing this setting allows your users to use higher zoom factors,
     // trading image quality for performance.
-
-    
     }
+
+    ngOnInit() {
+    }
+
+
+  protected readonly fake = fake;
 }
