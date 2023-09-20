@@ -1,0 +1,16 @@
+@media print {
+  body {
+    overflow: hidden;
+    background-color: white;
+  }
+
+  /* Hide all elements except the PDF viewer */
+  body > *:not(ngx-extended-pdf-viewer) {
+    display: none !important;
+  }
+
+  /* Hide the ngx-extended-pdf-viewer toolbar */
+  ngx-extended-pdf-viewer::ng-deep app-toolbar {
+    display: none !important;
+  }
+}
