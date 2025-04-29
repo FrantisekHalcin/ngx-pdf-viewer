@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExamplePdfViewerComponent } from './example-pdf-viewer/example-pdf-viewer.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { TesterComponent } from './tester/tester.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExamplePdfViewerComponent
+    ExamplePdfViewerComponent,
+    TesterComponent
   ],
   imports: [
     BrowserModule,
